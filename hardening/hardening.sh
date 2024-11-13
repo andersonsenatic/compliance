@@ -102,6 +102,8 @@ SELinux_Config() {
 
 Auditd_Config() {
     # Configuração do auditd para auditoria de segurança
+	sudo rm -f /etc/audit/rules.d/*.rules
+        sudo auditctl -D
 
     # Arquivos de autenticação e identidade
     echo "-w /etc/passwd -p wa -k auth" >> /etc/audit/rules.d/audit.rules
