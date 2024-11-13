@@ -173,7 +173,7 @@ while true; do
     |     Menu de Segurança            |
     ------------------------------------
     |   1. Configurar Segurança SSH    |
-    |   2. Configurar Firewall         |
+    |   2. Configurar de Kernel        |
     |   3. Política de Senhas PAM      |
     |   4. Desabilitar SELinux         |
     |   5. Auditoria e Logs            |
@@ -186,7 +186,7 @@ _EOF
     read -rp "Selecione uma opção: " input
     case "$input" in
         1) echo "Configuração de Segurança SSH"; SSH_Security_check ;;
-        2) echo "Configuração de Firewall"; Firewall_Config ;;
+        2) echo "Configuração de Kernel"; Kernel_Tuning ;;
         3) echo "Política de Senhas PAM"; PAM_Config ;;
         4) echo "Configuração do SELinux"; SELinux_Config ;;
         5) echo "Configuração de Auditoria"; Auditd_Config ;;
